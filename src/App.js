@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter , Routes ,Route } from 'react-router-dom'
+import Home from "./Home"
+import {useState , useEffect} from 'react'
+import DotLoader from "react-spinners/DotLoader";
+import './App.css'
+import Menu from './Menu'
 
-function App() {
+const App = () => {
+
+  const [loading,setLoading] =useState([false]);
+  useEffect(()=>{
+  setLoading(true)
+  setTimeout(()=>{
+  setLoading(false)
+  } , 3000)
+
+} ,[])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+
+{loading ? 
+    <div className="loader">
+     <DotLoader color={'#fdcf5a'}  size={90} speedMultiplier={1} />
+    </div>:
+    <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/Component' element={<Menu />} />
+
+
+
+
+    </Routes>
+}
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
