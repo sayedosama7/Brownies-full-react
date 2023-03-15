@@ -7,6 +7,7 @@ export default function App() {
     <MDBFooter   className='text-center text-lg-start text-muted'>
       <section className='border-bottom'>
       </section>
+
       <section className='foot'>
         <MDBContainer className='text-center text-md-start mt-5'>
           <MDBRow className='mt-3'>
@@ -43,21 +44,46 @@ export default function App() {
                 </a>
               </p>
             </MDBCol>
+
+            <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4'>
+              <h6 className='text-uppercase fw-bold mb-4'>Useful links</h6>
+              <p>
+              <a href='#!' className=' sss'>
+                  contact
+                </a>
+              </p>
+              <p>
+              <a href='#!' className=' sss'>
+                  menu
+                </a>
+              </p>
+              <p>
+              <a href='#!' className=' sss'>
+                  Orders
+                </a>
+              </p>
+              <p>
+              <a href='#!' className=' sss'>
+                  Help
+                </a>
+              </p>
+            </MDBCol>
+
             <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
               <p className=' sss'>
-                <MDBIcon  className="me-2" />
+                <MDBIcon icon="home" className="me-2" />
                 Egypt Sharkia Zagazig
               </p>
               <p className=' sss'>
-                <MDBIcon  className="me-3" />
+                <MDBIcon icon="envelope" className="me-3" />
                 sayedosama088@gmail.com
               </p>
               <p className=' sss'>
                 <MDBIcon icon="phone" className="me-3" /> + 02 01210304516
               </p>
               <p className=' sss'>
-                <MDBIcon  className="me-3" /> + 02 01030608819
+                <MDBIcon icon="print" className="me-3" /> + 02 01030608819
               </p>
             </MDBCol>
           </MDBRow>
